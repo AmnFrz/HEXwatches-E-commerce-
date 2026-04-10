@@ -1,0 +1,369 @@
+:root {
+  --yellow: #ffd600;
+  --black: #0a0a0a;
+  --dark: #111;
+  --card: #1c1c1c;
+  --muted: #888;
+  --text: #e0e0e0;
+}
+
+body {
+  background: var(--black);
+  color: var(--text);
+  font-family: "Inter", sans-serif;
+}
+
+/* ── NAVBAR ── */
+.container-fluid{
+  justify-content: space-between;
+}
+.navbar {
+  background: var(--black);
+  border-bottom: 1px solid #1e1e1e;
+}
+.navbar-toggler {
+  border-color: #333;
+}
+.navbar-toggler-icon {
+  filter: invert(1);
+}
+
+/* FULL LOGO IN YELLOW — both HEX and watches */
+.logo {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 2rem;
+  color: var(--yellow);
+  letter-spacing: 2px;
+  text-decoration: none;
+
+}
+.logo span {
+  font-family: "Inter", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-decoration: none;
+}
+
+.nav-link {
+  color: var(--text) !important;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+.nav-link:hover {
+  color: var(--yellow) !important;
+}
+
+.btn-signup {
+  background: var(--yellow);
+  color: var(--black) !important;
+  padding: 7px 20px;
+  border-radius: 4px;
+
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+.btn-signup:hover {
+  opacity: 0.85;
+}
+
+/* ── HERO ── */
+.hero {
+  min-height: calc(100vh - 62px);
+}
+.hero-left {
+  background: var(--black);
+  position: relative;
+}
+.hero-left::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse at 30% 60%,
+    rgba(255, 214, 0, 0.07),
+    transparent 65%
+  );
+  pointer-events: none;
+}
+
+.eyebrow {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--yellow);
+  margin-bottom: 1rem;
+}
+.hero-title {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: clamp(3.5rem, 6vw, 6rem);
+  line-height: 0.95;
+  color: #fff;
+  margin-bottom: 1.2rem;
+}
+.hero-title span {
+  color: var(--yellow);
+}
+.hero-sub {
+  font-size: 0.9rem;
+  color: var(--muted);
+  font-weight: 300;
+  max-width: 360px;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+.btn-yellow {
+  background: var(--yellow);
+  color: var(--black);
+  font-weight: 700;
+  font-size: 0.82rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  border: none;
+  padding: 13px 28px;
+  border-radius: 4px;
+  transition: opacity 0.2s, transform 0.2s;
+}
+.btn-yellow:hover {
+  opacity: 0.88;
+  transform: translateY(-1px);
+  color: var(--black);
+}
+
+.btn-outline-signup {
+  background: transparent;
+  color: var(--yellow) !important;
+  border: 1.5px solid var(--yellow);
+  font-weight: 600;
+  font-size: 0.82rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 13px 28px;
+  border-radius: 4px;
+  transition:
+    background 0.2s,
+    color 0.2s;
+}
+.btn-outline-signup:hover {
+  background: var(--yellow);
+  color: var(--black) !important;
+}
+
+/* ── CAROUSEL FIX ── */
+.col-md-6.p-0 {
+  position: relative;
+  min-height: 500px;
+}
+.carousel,
+.carousel-inner,
+.carousel-item {
+  height: 100%;
+}
+.obj-cover {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* ── SHOP ── */
+.section-title {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  color: #fff;
+  line-height: 1;
+  margin-bottom: 0.4rem;
+}
+
+/* ── PRODUCT CARD ── */
+.product-card {
+  background: var(--card);
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #222;
+  transition:
+    transform 0.3s,
+    border-color 0.3s,
+    box-shadow 0.3s;
+}
+.product-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(255, 214, 0, 0.3);
+  box-shadow: 0 12px 36px rgba(255, 214, 0, 0.07);
+}
+
+.img-wrap {
+  position: relative;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  background: #161616;
+}
+.img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+.product-card:hover .img-wrap img {
+  transform: scale(1.06);
+}
+
+.badge-new {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: var(--yellow);
+  color: var(--black);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 3px;
+}
+.brand-label {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0;
+}
+.product-name {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #fff;
+  margin: 3px 0 10px;
+}
+.price {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--yellow);
+}
+
+.add-btn {
+  background: transparent;
+  border: 1px solid #333;
+  color: var(--yellow);
+  width: 30px;
+  height: 30px;
+  border-radius: 4px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    background 0.2s,
+    border-color 0.2s;
+}
+.add-btn:hover {
+  background: var(--yellow);
+  border-color: var(--yellow);
+  color: var(--black);
+}
+
+/* ── CART TOAST ── */
+.cart-toast {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: var(--yellow);
+  color: var(--black);
+  padding: 12px 20px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  opacity: 0;
+  transform: translateY(10px);
+  transition:
+    opacity 0.3s,
+    transform 0.3s;
+  pointer-events: none;
+  z-index: 9999;
+}
+.cart-toast.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── CART COUNTER ── */
+.cart-count {
+  background: var(--yellow);
+  color: var(--black);
+  font-size: 0.6rem;
+  font-weight: 700;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 4px;
+  vertical-align: middle;
+}
+
+/* ── FOOTER ── */
+footer {
+  background: var(--dark);
+  border-top: 1px solid #1a1a1a;
+}
+.footer-copy {
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+/* ── SCROLL TO TOP ── */
+#scrollTop {
+  position: fixed;
+  bottom: 24px;
+  left: 24px;
+  background: var(--card);
+  border: 1px solid #333;
+  color: var(--yellow);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+  z-index: 9999;
+}
+#scrollTop:hover {
+  background: var(--yellow);
+  color: var(--black);
+}
+#scrollTop.visible {
+  display: flex;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 767px) {
+  .hero {
+    flex-direction: column;
+    min-height: auto;
+  }
+  .hero-left {
+    text-align: center;
+    align-items: center;
+  }
+  .hero-sub {
+    max-width: 100%;
+  }
+  .col-md-6.p-0 {
+    min-height: 280px;
+  }
+}

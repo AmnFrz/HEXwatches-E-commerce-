@@ -1,0 +1,267 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --yellow: #ffd600;
+  --black: #0a0a0a;
+  --dark: #111;
+  --card: #1a1a1a;
+  --muted: #888;
+  --text: #e0e0e0;
+  --border: #2a2a2a;
+}
+
+body {
+  background: var(--black);
+  color: var(--text);
+  font-family: "Inter", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+nav {
+  background: var(--black);
+  border-bottom: 1px solid #1e1e1e;
+  padding: 0 5%;
+  height: 62px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.8rem;
+  color: var(--yellow);
+  letter-spacing: 3px;
+  text-decoration: none;
+}
+
+.logo span {
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+
+.back-link {
+  font-size: 0.8rem;
+  color: var(--muted);
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: color 0.2s;
+}
+.back-link:hover {
+  color: var(--yellow);
+}
+
+.page {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  position: relative;
+  overflow: hidden;
+}
+.page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse at 50% 40%,
+    rgba(225, 214, 0, 0.06),
+    transparent 100%
+  );
+  pointer-events: none;
+}
+
+.form-box {
+  width: 100%;
+  max-width: 420px;
+  background: var(--card);
+  border: 1px solid var(--card);
+  border-radius: 12px;
+  padding: 2.5rem 2rem;
+  position: relative;
+  z-index: 1;
+}
+.form-eyebrow {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 4.5px;
+  text-transform: uppercase;
+  color: var(--yellow);
+  margin-bottom: 0.5rem;
+}
+.form-title {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 3rem;
+  color: #fff;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+.form-sub {
+  font-size: 0.8rem;
+  color: var(--muted);
+  font-weight: 300;
+  margin-bottom: 2rem;
+}
+
+.field {
+  position: relative;
+  margin-bottom: 1rem;
+}
+.field label {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 5px;
+}
+.field input {
+  width: 100%;
+  background: #111;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  color: var(--text);
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  padding: 1rem 1rem;
+  outline: none;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+.field input::placeholder {
+  color: #444;
+}
+.field input:hover {
+  border-color: #555;
+  box-shadow: 0 0 18px 4px rgba(255, 214, 0, 0.12);
+}
+.field input:focus {
+  border-color: var(--yellow);
+  box-shadow: 0 0 24px 6px rgba(255, 214, 0, 0.22);
+}
+.field input::placeholder {
+  color: #444;
+}
+
+.field .toggle-pass {
+  position: absolute;
+  right: 12px;
+  bottom: 20px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: var(--muted);
+  user-select: none;
+}
+.field .toggle-pass:hover {
+  color: var(--yellow);
+}
+
+.err-msg {
+  font-size: 0.9rem;
+  color: #ff5555;
+  margin-top: 14px;
+  display: none;
+}
+.field.error input {
+  border-color: #ff5555;
+}
+.field.error .err-msg {
+  display: block;
+}
+.btn-submit {
+  width: 100%;
+  background: var(--yellow);
+  color: var(--black);
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 6px;
+  padding: 14px;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition:
+    opacity 0.2s,
+    transform 0.2s;
+}
+.btn-submit:hover {
+  opacity: 0.88;
+  transform: translateY(-1px);
+}
+.btn-submit:active {
+  transform: translateY(0);
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 1.4rem 0;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+.divider span {
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.login-line {
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+.login-line a {
+  color: var(--yellow);
+  text-decoration: none;
+  font-weight: 600;
+}
+.login-line a:hover {
+  text-decoration: underline;
+}
+
+.success-box {
+  display: none;
+  text-align: center;
+  padding: 1rem 0;
+}
+.success-box .check {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+.success-box h3 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 3rem;
+  color: var(--yellow);
+  margin-bottom: 0.5rem;
+}
+.success-box p {
+  color: var(--muted);
+}
+
+footer {
+  border-top: 1px solid #1a1a1a;
+  padding: 1rem 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-copy {
+  font-size: 0.8rem;
+  color: var(--muted);
+}

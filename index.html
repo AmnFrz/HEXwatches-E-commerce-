@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HEX watches</title>
+    <link rel="icon" href="images/HEX_icon.jpg" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+<body>
+ 
+  <!-- NAVBAR -->
+<nav class="navbar navbar-expand-md sticky-top">
+  <div class="container-fluid px-4">
+    <a class="navbar-brand logo" href="#">HEX <span>watches</span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+      <ul class="navbar-nav align-items-md-center gap-md-3">
+        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#shop">Collections</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+        <li class="nav-item"><a class="nav-link" href="#" id="cartIcon">🛒 Cart <span class="cart-count" id="cartCount">0</span></a></li>
+        <li class="nav-item"><a class="btn-signup" href="signup.html">Sign Up</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+ 
+  <!-- HERO -->
+  <section class="hero row g-0">
+    <div class="col-md-6 hero-left d-flex flex-column justify-content-center px-5 py-5">
+      <p class="eyebrow">Premium Timepieces</p>
+      <h1 class="hero-title">WEAR THE <span>FUTURE</span></h1>
+      <p class="hero-sub">Curated watches from the world's finest brands. Every tick, a statement.</p>
+      <div class="d-flex gap-3 flex-wrap">
+        <a href="#shop" class="btn btn-yellow">Shop Now</a>
+        <a href="signup.html" class="btn btn-outline-signup">Sign Up</a>
+      </div>
+    </div>
+    <div class="col-md-6 p-0">
+      <div id="heroCarousel" class="carousel slide h-100" data-bs-ride="carousel">
+        <div class="carousel-inner h-100">
+          <div class="carousel-item active h-100"><img src="images/card1.png" class="d-block w-100 h-100 obj-cover" alt="slide 1"></div>
+          <div class="carousel-item h-100"><img src="images/card5.png" class="d-block w-100 h-100 obj-cover" alt="slide 2"></div>
+          <div class="carousel-item h-100"><img src="images/slide3.png" class="d-block w-100 h-100 obj-cover" alt="slide 3"></div>
+          <div class="carousel-item h-100"><img src="images/slide4.png" class="d-block w-100 h-100 obj-cover" alt="slide 4"></div>
+        </div>
+        <button class="carousel-control-prev" data-bs-target="#heroCarousel" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button>
+        <button class="carousel-control-next" data-bs-target="#heroCarousel" data-bs-slide="next"><span class="carousel-control-next-icon"></span></button>
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+          <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+          <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+          <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="3"></button>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- SHOP SECTION -->
+  <section class="py-5 px-4 px-md-5" id="shop">
+    <p class="eyebrow mb-1">Collections</p>
+    <h2 class="section-title">SHOP IN</h2>
+    <p class="text-muted mb-4">Your wrist deserves a masterpiece.</p>
+ 
+    <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-3">
+ 
+      <div class="col"><div class="product-card">
+        <div class="img-wrap"><img src="images/card1.png" alt="Breitling"><span class="badge-new">New</span></div>
+        <div class="p-3">
+          <p class="brand-label">Breitling</p><p class="product-name">Navitimer</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <span class="price">₹1,199</span>
+            <button class="add-btn" data-name="Navitimer" data-price="1199">+</button>
+          </div>
+        </div>
+      </div></div>
+ 
+      <div class="col"><div class="product-card">
+        <div class="img-wrap"><img src="images/card2.png" alt="Tommy Hilfiger"></div>
+        <div class="p-3">
+          <p class="brand-label">Tommy Hilfiger</p><p class="product-name">Sport Chrono</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <span class="price">₹1,499</span>
+            <button class="add-btn" data-name="Sport Chrono" data-price="1499">+</button>
+          </div>
+        </div>
+      </div></div>
+ 
+      <div class="col"><div class="product-card">
+        <div class="img-wrap"><img src="images/card3.png" alt="Cartier"><span class="badge-new">Hot</span></div>
+        <div class="p-3">
+          <p class="brand-label">Cartier</p><p class="product-name">Santos-Dumont</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <span class="price">₹1,999</span>
+            <button class="add-btn" data-name="Santos-Dumont" data-price="1999">+</button>
+          </div>
+        </div>
+      </div></div>
+ 
+      <div class="col"><div class="product-card">
+        <div class="img-wrap"><img src="images/card4.png" alt="Rado"></div>
+        <div class="p-3">
+          <p class="brand-label">Rado</p><p class="product-name">Integral Ceramic</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <span class="price">₹2,299</span>
+            <button class="add-btn" data-name="Integral Ceramic" data-price="2299">+</button>
+          </div>
+        </div>
+      </div></div>
+ 
+      <div class="col"><div class="product-card">
+        <div class="img-wrap"><img src="images/card5.png" alt="Hublot"><span class="badge-new">Limited</span></div>
+        <div class="p-3">
+          <p class="brand-label">Hublot</p><p class="product-name">Big Bang Unico</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <span class="price">₹3,499</span>
+            <button class="add-btn" data-name="Big Bang Unico" data-price="3499">+</button>
+          </div>
+        </div>
+      </div></div>
+ 
+      <div class="col"><div class="product-card">
+        <div class="img-wrap"><img src="images/card6.png" alt="Maserati"></div>
+        <div class="p-3">
+          <p class="brand-label">Maserati</p><p class="product-name">Potenza Skeleton</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <span class="price">₹2,799</span>
+            <button class="add-btn" data-name="Potenza Skeleton" data-price="2799">+</button>
+          </div>
+        </div>
+      </div></div>
+ 
+      <div class="col"><div class="product-card">
+        <div class="img-wrap"><img src="images/card7.png" alt="Casio"></div>
+        <div class="p-3">
+          <p class="brand-label">Casio</p><p class="product-name">G-Shock Metal</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <span class="price">₹899</span>
+            <button class="add-btn" data-name="G-Shock Metal" data-price="899">+</button>
+          </div>
+        </div>
+      </div></div>
+ 
+      <div class="col"><div class="product-card">
+        <div class="img-wrap"><img src="images/card8.png" alt="Hublot Classic"><span class="badge-new">New</span></div>
+        <div class="p-3">
+          <p class="brand-label">Hublot</p><p class="product-name">Classic Fusion</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <span class="price">₹3,999</span>
+            <button class="add-btn" data-name="Classic Fusion" data-price="3999">+</button>
+          </div>
+        </div>
+      </div></div>
+ 
+    </div>
+  </section>
+ 
+  <!-- FOOTER -->
+  <footer class="d-flex justify-content-between align-items-center px-5 py-3 mt-4">
+    <span class="logo">HEX <span>watches</span></span>
+    <span class="footer-copy">© 2025 HEX Watches. All rights reserved.</span>
+  </footer>
+ 
+  <!-- CART TOAST -->
+  <div class="cart-toast" id="cartToast"></div>
+ 
+  <!-- SCROLL TO TOP -->
+  <button id="scrollTop" title="Back to top">↑</button>
+
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+ <script src="script.js"></script> 
+</body>
+</html>
