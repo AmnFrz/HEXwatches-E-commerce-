@@ -13,7 +13,7 @@ body {
   font-family: "Inter", sans-serif;
 }
 
-/* ── NAVBAR ── */
+/* NAVBAR */
 .container-fluid{
   justify-content: space-between;
 }
@@ -28,7 +28,7 @@ body {
   filter: invert(1);
 }
 
-/* FULL LOGO IN YELLOW — both HEX and watches */
+/* LOGO */
 .logo {
   font-family: "Bebas Neue", sans-serif;
   font-size: 2rem;
@@ -73,7 +73,7 @@ body {
   opacity: 0.85;
 }
 
-/* ── HERO ── */
+/* HERO */
 .hero {
   min-height: calc(100vh - 62px);
 }
@@ -157,7 +157,7 @@ body {
   color: var(--black) !important;
 }
 
-/* ── CAROUSEL FIX ── */
+/* CAROUSEL */
 .col-md-6.p-0 {
   position: relative;
   min-height: 500px;
@@ -176,7 +176,7 @@ body {
   left: 0;
 }
 
-/* ── SHOP ── */
+/* SHOP */
 .section-title {
   font-family: "Bebas Neue", sans-serif;
   font-size: clamp(2rem, 4vw, 3.5rem);
@@ -185,7 +185,7 @@ body {
   margin-bottom: 0.4rem;
 }
 
-/* ── PRODUCT CARD ── */
+/* PRODUCT CARD */
 .product-card {
   background: var(--card);
   border-radius: 8px;
@@ -273,7 +273,7 @@ body {
   color: var(--black);
 }
 
-/* ── CART TOAST ── */
+/* CART TOAST */
 .cart-toast {
   position: fixed;
   bottom: 24px;
@@ -297,7 +297,7 @@ body {
   transform: translateY(0);
 }
 
-/* ── CART COUNTER ── */
+/* CART COUNTER */
 .cart-count {
   background: var(--yellow);
   color: var(--black);
@@ -313,7 +313,7 @@ body {
   vertical-align: middle;
 }
 
-/* ── FOOTER ── */
+/* FOOTER */
 footer {
   background: var(--dark);
   border-top: 1px solid #1a1a1a;
@@ -323,7 +323,7 @@ footer {
   color: var(--muted);
 }
 
-/* ── SCROLL TO TOP ── */
+/* SCROLL TO TOP */
 #scrollTop {
   position: fixed;
   bottom: 24px;
@@ -350,7 +350,7 @@ footer {
   display: flex;
 }
 
-/* ── RESPONSIVE ── */
+/* RESPONSIVE */
 @media (max-width: 767px) {
   .hero {
     flex-direction: column;
